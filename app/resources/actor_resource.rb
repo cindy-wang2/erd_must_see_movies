@@ -9,11 +9,10 @@ class ActorResource < ApplicationResource
 
   # Direct associations
 
-  has_many   :roles
+  has_many :roles
 
   # Indirect associations
 
   many_to_many :films,
                resource: MovieResource
-
 end

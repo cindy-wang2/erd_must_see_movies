@@ -4,7 +4,7 @@ class Role < ApplicationRecord
   belongs_to :actor
 
   belongs_to :film,
-             :class_name => "Movie"
+             class_name: "Movie"
 
   # Indirect associations
 
@@ -15,5 +15,4 @@ class Role < ApplicationRecord
   def to_s
     character
   end
-
 end

@@ -19,5 +19,4 @@ class UserResource < ApplicationResource
 
   many_to_many :bookmarked,
                resource: MovieResource
-
 end

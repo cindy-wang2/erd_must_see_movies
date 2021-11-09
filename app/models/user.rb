@@ -1,23 +1,22 @@
 class User < ApplicationRecord
-  
   include JwtToken
-# Direct associations
+  # Direct associations
 
   has_many   :bookmarks,
-             :dependent => :destroy
+             dependent: :destroy
 
   has_many   :reviews,
-             :dependent => :destroy
+             dependent: :destroy
 
   # Indirect associations
 
   has_many   :reviewed_films,
-             :through => :reviews,
-             :source => :movie
+             through: :reviews,
+             source: :movie
 
   has_many   :bookmarked,
-             :through => :bookmarks,
-             :source => :movie
+             through: :bookmarks,
+             source: :movie
 
   # Validations
 

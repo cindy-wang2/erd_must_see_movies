@@ -2,30 +2,30 @@ class Movie < ApplicationRecord
   # Direct associations
 
   has_many   :bookmarks,
-             :dependent => :destroy
+             dependent: :destroy
 
   has_many   :reviews,
-             :dependent => :destroy
+             dependent: :destroy
 
   has_many   :roles,
-             :foreign_key => "film_id",
-             :dependent => :destroy
+             foreign_key: "film_id",
+             dependent: :destroy
 
   belongs_to :director
 
   # Indirect associations
 
   has_many   :actors,
-             :through => :roles,
-             :source => :actor
+             through: :roles,
+             source: :actor
 
   has_many   :reviewers,
-             :through => :reviews,
-             :source => :user
+             through: :reviews,
+             source: :user
 
   has_many   :bookmarkers,
-             :through => :bookmarks,
-             :source => :user
+             through: :bookmarks,
+             source: :user
 
   # Validations
 
@@ -34,5 +34,4 @@ class Movie < ApplicationRecord
   def to_s
     title
   end
-
 end

@@ -2,13 +2,13 @@ class Actor < ApplicationRecord
   # Direct associations
 
   has_many   :roles,
-             :dependent => :destroy
+             dependent: :destroy
 
   # Indirect associations
 
   has_many   :films,
-             :through => :roles,
-             :source => :film
+             through: :roles,
+             source: :film
 
   # Validations
 
@@ -17,5 +17,4 @@ class Actor < ApplicationRecord
   def to_s
     actor_dob
   end
-
 end

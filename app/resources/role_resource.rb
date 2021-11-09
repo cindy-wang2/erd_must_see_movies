@@ -14,5 +14,4 @@ class RoleResource < ApplicationResource
              resource: MovieResource
 
   # Indirect associations
-
 end
