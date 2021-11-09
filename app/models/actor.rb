@@ -6,6 +6,10 @@ class Actor < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :films,
+             :through => :roles,
+             :source => :film
+
   # Validations
 
   # Scopes
