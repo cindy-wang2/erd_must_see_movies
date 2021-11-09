@@ -12,12 +12,20 @@
 
       <dt>Actor</dt>
       <!-- Display actor_id start -->
-      <dd><%= role.actor_id %></dd>
+      <dd>
+        <% if @role.actor.present? %>
+          <%= link_to role.actor, role.actor %>
+        <% end %>
+      </dd>
       <!-- Display actor_id end -->
 
       <dt>Film</dt>
       <!-- Display film_id start -->
-      <dd><%= role.film_id %></dd>
+      <dd>
+        <% if @role.film.present? %>
+          <%= link_to role.film, role.film %>
+        <% end %>
+      </dd>
       <!-- Display film_id end -->
 
     </dl>
