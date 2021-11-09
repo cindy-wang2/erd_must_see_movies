@@ -1,5 +1,7 @@
 ActiveAdmin.register Movie do
 
+ permit_params :title, :duration, :description, :year, :poster, :director_id
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
