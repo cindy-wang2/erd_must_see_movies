@@ -13,4 +13,7 @@ class ActorResource < ApplicationResource
 
   # Indirect associations
 
+  many_to_many :films,
+               resource: MovieResource
+
 end
