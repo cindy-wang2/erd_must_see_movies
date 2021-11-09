@@ -9,6 +9,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :reviewed_films,
+             :through => :reviews,
+             :source => :movie
+
   has_many   :bookmarked,
              :through => :bookmarks,
              :source => :movie
