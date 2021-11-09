@@ -8,6 +8,9 @@ class RoleResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :film,
+             resource: MovieResource
+
   # Indirect associations
 
 end
