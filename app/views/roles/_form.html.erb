@@ -68,7 +68,7 @@
 
     <%= f.label :film_id %>
     <!-- Input for film_id start -->
-    <%= f.number_field :film_id, class: film_class, placeholder: "Enter film" %>
+    <%= f.collection_select :film_id, Movie.all, :id, :to_s, {}, class: "form-control" %>
     <!-- Input for film_id end -->
     <% if film_was_invalid %>
       <% role.errors.full_messages_for(:film).each do |message| %>
